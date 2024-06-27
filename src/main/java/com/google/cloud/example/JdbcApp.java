@@ -1,5 +1,6 @@
 package com.google.cloud.example;
 
+import com.google.cloud.spanner.connection.SpannerPool;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -15,6 +16,7 @@ public class JdbcApp {
         }
       }
     }
+    SpannerPool.closeSpannerPool();
   }
 
 }
